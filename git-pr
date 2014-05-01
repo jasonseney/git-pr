@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [ $# -lt 2 ]; then 
+    echo "Error in $0 - Invalid argument count" 
+    echo "Syntax: $0 target_name title" 
+    exit 2
+fi 
+
+link=$(echo $2 | cat - ~/.pr-footer | hub pull-request -F - -b $1)
+
+echo $link | pbcopy
+
+echo "Pull request link copied to clipboard:"
+echo $link
+
