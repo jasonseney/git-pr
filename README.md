@@ -5,7 +5,7 @@ Create a Pull Request with a common footer using [hub](https://github.com/github
 
 ### Usage
 
-    git pr "My PR Title" "The description of my pull request"
+    git pr target-branch "The description of my pull request"
 
 ### Installation: 
 
